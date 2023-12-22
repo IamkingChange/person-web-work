@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="./icon_files/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script src="js/jquery/jquery-3.2.1.min.js"></script>
+	<script>
+		var bannerSelected = 1;
+		$(document).ready(function() {
+			var bannerLeft = $("#banner-left");
+			var bannerRight = $("#banner-right");
+			//banner picture switch-------------------
+			bannerLeft.on('click', function() {
+				var imgs = $("img[class^='bannerImg']");
+				if (bannerSelected == 1) {
+					bannerSelected = imgs.length;
+				} else {
+					bannerSelected--;
+				}
+				for (var i = 1; i <= imgs.length; i++) {
+					$('.bannerImg' + i).removeClass("selected");
+				}
+				$('.bannerImg' + bannerSelected).addClass("selected");
+			});
+			bannerRight.on('click', function() {
+				var imgs = $("img[class^='bannerImg']");
+				if (bannerSelected == 3) {
+					bannerSelected = 1;
+				} else {
+					bannerSelected++;
+				}
+				for (var i = 1; i <= imgs.length; i++) {
+					$('.bannerImg' + i).removeClass("selected");
+				}
+				$('.bannerImg' + bannerSelected).addClass("selected");
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="container">
+	<div class="rwd-logo">
+		<a href="index.html"><img alt="logo" src="images/loglo.png"></a>
+	</div>
+	<div class="header col-sm-12">
+		<div class="logo col-sm-1">
+			<a href="index.html"><img alt="logo" src="images/loglo.png"></a>
+		</div>
+
+		<div class="menu-group col-sm-8 col-sm-offset-3">
+			<ul class="item menu">
+				<li><a href="star-wear.html">
+					<p>明星穿什麼</p>
+				</a></li>
+				<li>
+					<a href="products.html">
+						<p>男鞋</p>
+					</a>
+					<ul>
+						<li>
+							<a href="products.html"><p>慢跑鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>籃球鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>棒球鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>網球鞋</p></a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<p>女鞋</p>
+					</a>
+					<ul>
+						<li>
+							<a href="#"><p>慢跑鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>籃球鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>棒球鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>網球鞋</p></a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="sale.html">	<p>好康不私藏</p>
+				</a></li>
+			</ul>
+			<div class="item register">
+				<a href="#">註冊</a>/<a href="#">登入</a>
+				<a href="#"><i class="fa fa-shopping-cart"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="rwd-header col-xs-12">
+		<div class="logo">
+			<a href="index.html"><img alt="logo" src="images/logo-rwd.png"></a>
+		</div>
+		<div class="menu-group col-xs-12">
+			<div class="item col-xs-3">
+				<a href="star-wear.html"><p><i class="fa fa-users"></i></p><p class="txt">明星穿什麼</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="products.html"><p><i class="fa fa-male"></i></p><p class="txt">男鞋</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="products.html"><p><i class="fa fa-female""></i></p><p class="txt">女鞋</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="sale.html"><p><i class="fa fa-gift""></i></p><p class="txt">好康不私藏</p></a>
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="to-left" id="banner-left"><a href="#"><img alt="change_page" src="images/change_page.png"></a></div>
+		<div class="to-right" id="banner-right"><a href="#"><img alt="change_page_right" src="images/change_page_right.png"></a>
+		</div>
+		<img class="bannerImg1 selected" alt="banner-basketball" src="images/banner1.png">
+		<img class="bannerImg2" alt="banner-running" src="images/banner2.png">
+		<img class="bannerImg3" src="images/banner3.png" alt="banner-tennis">
+	</div>
+	<div class="second-container">
+		<div class="hot-product col-sm-12 col-xs-12">
+			<div class="title col-sm-2 col-xs-12">
+				<h1>熱賣商品</h1>
+			</div>
+			<div class="content col-sm-10 col-xs-10 col-xs-offset-1">
+				<div class="items">
+					<a href="product.html" class="new item col-sm-4 col-xs-6">
+						<div class="product-content">
+							<div class="pic">
+								<img alt="hot_item" src="images/hot_item1.png">
+							</div>
+							<div class="txt">
+								<p class="name">海洋</p>
+								<p>$2500</p>
+							</div>
+						</div>
+					</a>
+					<a href="product.html" class="item col-sm-4 col-xs-6">
+						<div class="product-content">
+							<div class="pic">
+								<img alt="hot_item" src="images/hot_item2.png">
+							</div>
+							<div class="txt">
+							<p class="name">CJ3 勁速</p>
+							<p>$2000</p>
+						</div>
+						</div>
+					</a>
+					<a href="product.html" class="sale item col-sm-4 col-xs-6">
+						<div class="product-content">
+							<div class="pic">
+								<img alt="product1" alt="hot_item" src="images/hot_item3.png">
+							</div>
+							<div class="txt">
+							<p class="name">LJ 5 代</p>
+							<p>$3000</p>
+						</div>
+						</div>
+					</a>
+					<a href="product.html" class="sale item col-sm-4 col-xs-6">
+						<div class="product-content">
+							<div class="pic">
+								<img alt="product1" alt="hot_item" src="images/product-list/item12.png">
+							</div>
+							<div class="txt">
+							<p class="name">華麗年代</p>
+							<p>$3000</p>
+						</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+
+
+		<!-- products============================================= -->
+		<div class="products col-sm-12 col-xs-12">
+			<div class="title col-sm-12  col-xs-12">
+				<h1>我們產品</h1>
+			</div>
+			<div class="content col-sm-12  col-xs-12">
+				<div class="item item-1 col-sm-3 col-xs-6">
+					<a href="products.html">
+						<img alt="product1" src="images/product1.png">
+						<h2>慢跑鞋</h2>
+					</a>
+				</div>
+				<div class="item item-2 col-sm-3 col-xs-6">
+					<a href="products.html">
+						<img alt="product2" src="images/product2.png">
+						<h2>籃球鞋</h2>
+					</a>
+				</div>
+				<div class="item item-3 col-sm-3 col-xs-6">
+					<a href="products.html">
+						<img  alt="product3" src="images/product3.png">
+						<h2>棒球鞋</h2>
+					</a>
+				</div>
+				<div class="item item-4 col-sm-3 col-xs-6">
+					<a href="products.html">
+						<img alt="product4" src="images/product4.png">
+						<h2>網球鞋</h2>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<!-- star-wear============================================ -->
+	<div class="star-wear col-sm-12 col-xs-12">
+		<div class="content col-sm-10 col-xs-12">
+			<img alt="star" src="images/index_star.png">
+		</div>
+		<div class="txt col-sm-2 col-xs-12">
+			<div class="title">
+				<h1>明星穿什麼</h1>
+				<div class="for-rwd">
+					<h2>SC 橘黑款</h2>
+					<p>織紋鞋面改善足部運動靈活性，為籃球高手提供支援。碳纖維足弓改善整個腳掌的穩定性，有助減少滑動。Af材質帶來舒適貼合、輕質結構與穩固支撐。中底科技，帶來迅疾的啟動變向。不同尺碼會有相應差異。</p>
+					<a href="star-wear.html">更多</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer col-sm-12 col-xs-12">
+		<div class="logo">
+			<img alt="logo" src="images/loglo.png">
+		</div>
+		<ul class="footer-menu">
+			<li class="col-xs-3 col-sm-3">
+				<a href="star-wear.html">明星穿什麼</a>
+			</li>
+			<li class="col-xs-3 col-sm-3">
+				<a href="products.html">男鞋</a>
+				<ul>
+					<li><a href="products.html">慢跑鞋</a></li>
+					<li><a href="products.html">籃球鞋</a></li>
+					<li><a href="products.html">棒球鞋</a></li>
+					<li><a href="products.html">網球鞋</a></li>
+				</ul>
+			</li>
+			<li class="col-xs-3 col-sm-3">
+				<a href="products.html">女鞋</a>
+				<ul>
+					<li><a href="products.html">慢跑鞋</a></li>
+					<li><a href="products.html">籃球鞋</a></li>
+					<li><a href="products.html">棒球鞋</a></li>
+					<li><a href="products.html">網球鞋</a></li>
+				</ul>
+			</li>
+			<li class="col-xs-3 col-sm-3"><a href="sale.html">好康不私藏</a></li>
+		</ul>
+	</div>
+
+</div>
+</body>
+</html>

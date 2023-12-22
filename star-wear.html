@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/star-wear.css">
+	<link rel="stylesheet" type="text/css" href="./icon_files/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script src="js/jquery/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			//stars hover---------------------
+			var starImgs = $(".star img");
+			for (var i = 0; i < starImgs.length; i++) {
+				$(starImgs[i]).mouseenter(function() {
+				    $(this).attr('src', $(this).attr('src').replace('-black',''));
+				  }).mouseleave(function() {
+				    $(this).attr('src', $(this).attr('src').replace('.png','-black.png'))
+				  });
+			}
+			//go top
+			$('#go-top').on('click', function() {
+				$(window).scrollTop(0);
+			});
+			$(window).on('scroll', function() {
+				if ($(window).scrollTop() < 500) {
+					$('#go-top').css('display', 'none');
+				} else {
+					$('#go-top').css('display', 'block');
+				}
+			})
+		});
+	</script>
+</head>
+<body>
+<div class="container">
+	<div id="go-top"><i class="fa fa-chevron-circle-up""></i></div>
+	<div class="rwd-logo">
+		<a href="index.html"><img alt="logo" src="images/loglo.png"></a>
+	</div>	
+	<div class="header col-sm-12">
+		<div class="logo col-sm-1">
+			<a href="index.html"><img alt="logo" src="images/loglo.png"></a>
+		</div>
+
+		<div class="menu-group col-sm-8 col-sm-offset-3">
+			<ul class="item menu">
+				<li><a href="star-wear.html">
+					<p>明星穿什麼</p>
+				</a></li>
+				<li>
+					<a href="products.html">
+						<p>男鞋</p>
+					</a>
+					<ul>
+						<li>
+							<a href="products.html"><p>慢跑鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>籃球鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>棒球鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>網球鞋</p></a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<p>女鞋</p>
+					</a>
+					<ul>
+						<li>
+							<a href="#"><p>慢跑鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>籃球鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>棒球鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>網球鞋</p></a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="sale.html">	<p>好康不私藏</p>
+				</a></li>
+			</ul>
+			<div class="item register">
+				<a href="#">註冊</a>/<a href="#">登入</a>
+				<a href="#"><i class="fa fa-shopping-cart"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="rwd-header col-xs-12">
+		<div class="logo">
+			<a href="index.html"><img alt="logo" src="images/logo-rwd.png"></a>
+		</div>
+		<div class="menu-group col-xs-12">
+			<div class="item col-xs-3">
+				<a href="star-wear.html"><p><i class="fa fa-users"></i></p><p class="txt">明星穿什麼</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="products.html"><p><i class="fa fa-male"></i></p><p class="txt">男鞋</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="products.html"><p><i class="fa fa-female""></i></p><p class="txt">女鞋</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="sale.html"><p><i class="fa fa-gift""></i></p><p class="txt">好康不私藏</p></a>
+			</div>
+		</div>
+	</div>
+	<h1>明星穿什麼</h1>
+	<ul class="classification">
+		<li><a href="star-wear.html"><h2>慢跑</h2></a></li>
+		<li><a href="star-wear.html"><h2>籃球</h2></a></li>
+		<li><a href="star-wear.html"><h2>棒球</h2></a></li>
+		<li><a href="star-wear.html"><h2>網球</h2></a></li>
+	</ul>
+	<div class="stars-container col-sm-12 col-xs-12">
+		<div class="stars">
+			<div class="star long-width col-sm-4 col-sm-offset-1 col-xs-12">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-1-black.png">
+				</a></div>
+			<div class="star col-sm-2 col-xs-6">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-2-black.png">
+				</a></div>
+			<div class="star col-sm-2 col-xs-6">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-3-black.png">
+				</a></div>
+			<div class="star long-height right col-sm-2 col-xs-6">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-4-black.png">
+				</a></div>
+			<div class="star long-height col-sm-2 col-sm-offset-1 col-xs-6">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-5-black.png">
+				</a></div>
+			<div class="star col-sm-2 rwd-none">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-6-black.png">
+				</a></div>
+			<div class="star long-width col-sm-4 col-xs-12">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-7-black.png">
+				</a></div>
+			<div class="star long-width col-sm-4 col-xs-12">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-8-black.png">
+				</a></div>
+			<div class="star col-sm-2 col-xs-6">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-9-black.png">
+				</a></div>
+			<div class="star col-sm-2 col-xs-6">
+				<a href="#wear-content">
+					<img src="images/star-wear/stars-10-black.png">
+				</a></div>
+		</div>
+	</div>
+	<div class="wear-content" id='wear-content'>
+		<h2>Stephen Curry</h2>
+		<div class="wears">				
+			<div class="center-bar col-sm-4 col-sm-offset-4 col-xs-4  col-xs-offset-4">
+				<img src="images/star-wear/center-block.png">
+			</div>
+			<div class="wear-item item1 col-sm-12">
+				<div class="picture col-sm-10 col-sm-offset-1 col-xs-12">
+					<img src="images/star-wear/big-man1.png">
+				</div>
+				<div class="content col-sm-12 col-xs-12">
+					<div class="shoe col-sm-3 col-sm-offset-1 col-xs-4">
+							<h3>SC 橘黑款</h3>
+							<img alt="min-shoe1" src="images/star-wear/min-shoe1.png"></img>
+					</div>
+					<div class="txt col-sm-7 col-xs-8">
+						<p>織紋鞋面改善足部運動靈活性，為籃球高手提供支援。碳纖維足弓改善整個腳掌的穩定性，有助減少滑動。Af材質帶來舒適貼合、輕質結構與穩固支撐。中底科技，帶來迅疾的啟動變向。不同尺碼會有相應差異</p>
+						<a href="#" class="see-more"></a>
+					</div>
+				</div>
+
+			</div>
+			<div class="wear-item item2">
+				<div class="picture col-sm-10 col-sm-offset-1 col-xs-12">
+					<img alt="big-man2" src="images/star-wear/big-man2.png">
+				</div>
+				<div class="content col-sm-12 col-xs-12">
+					<div class="shoe col-xs-4 col-sm-3 col-sm-offset-1">
+						<h3>尊爵銀</h3>
+						<img alt="min-shoe2" src="images/star-wear/min-shoe2.png"></img>
+					</div>
+					<div class="txt col-xs-8 col-sm-7">
+						<p>注塑合成鞋面，打造輕盈而舒適的穿著體驗。外部PU罩面完善鞋身結構並提供耐久支撐。非對稱鞋口結合鞋舌構造，改善足踝處的舒適感與貼合度。外鞋跟與中足弓形鞋墊提供腳跟、足弓、前足三重穩定性鎖定，加強支撐，提供防滑保護。logo與個性鞋帶設計在球場上凸顯品牌特質與個人風格。</p>
+						<a href="#" class="see-more"></a>
+					</div>
+				</div>
+			</div>
+			<div class="wear-item item3">
+				<div class="picture col-sm-6 col-sm-offset-4 col-xs-8 col-xs-offset-3">
+					<img alt="big-man3.png" src="images/star-wear/big-man3.png">
+				</div>
+				<div class="content col-sm-12 col-xs-12">
+					<div class="shoe col-sm-3 col-sm-offset-1 col-xs-4">
+						<h3>疾風藍白款</h3>
+						<img alt="min-shoe3" src="images/star-wear/min-shoe3.png"></img>
+					</div>
+					<div class="txt col-sm-7 col-xs-8">
+						<p>連明星都滿意的比賽用鞋，用較為耐用的複合網眼布鞋面搭配軟皮革鞋幫以及踝部兩側的鑲面，有助提升結構清晰度與支撐性能。非對稱鞋眼片與新穎的網狀系帶設計，創造緊致貼合的腳感，精簡用料，免去搭扣。外部TPU後跟承托架優化支撐與穩定性。結實的TPU罩面改善耐磨性。鞋墊貼合腳掌，創造量身定制般的舒適腳感。全掌發泡材料中底創造輕盈靈活與反應靈敏的腳感。</p>
+						<a href="#" class="see-more"></a>
+					</div>
+				</div>
+			</div>
+			<div class="wear-item item4">
+				<div class="picture col-sm-5 col-sm-offset-4  col-xs-7 col-xs-offset-3">
+					<img alt="big-man4" src="images/star-wear/big-man4.png">
+				</div>
+				<div class="content col-sm-12 col-xs-12">
+					<div class="shoe col-sm-3 col-sm-offset-1 col-xs-4">
+						<h3>Rocket</h3>
+						<img alt="min-shoe4" src="images/star-wear/min-shoe4.png"></img>
+					</div>
+					<div class="txt col-sm-7 col-xs-7">
+						<p>升級版技術改善了透氣性、拉伸性以及對足部的支撐性。外足跟支撐架與內足弓墊提供良好的穩定性與支撐性。狩獵夾式的鞋帶系統與鞋舌相連，創造緊緻貼合的腳感。後跟處的襯墊加強支撐，改善後跟處的舒適度。模切防菌鞋墊貼合腳掌自然形狀。後跟底部的吸收衝擊並迅速轉化為舒適反彈。全掌發泡材料層吸收落地衝擊力並轉化為有力反彈。</p>
+						<a href="#" class="see-more"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer col-sm-12 col-xs-12">
+		<div class="logo">
+			<img alt="logo" src="images/loglo.png">
+		</div>
+		<ul class="footer-menu">
+			<li class="col-xs-3 col-sm-3">
+				<a href="star-wear.html">明星穿什麼</a>
+			</li>
+			<li class="col-xs-3 col-sm-3">
+				<a href="products.html">男鞋</a>
+				<ul>
+					<li><a href="products.html">慢跑鞋</a></li>
+					<li><a href="products.html">籃球鞋</a></li>
+					<li><a href="products.html">棒球鞋</a></li>
+					<li><a href="products.html">網球鞋</a></li>
+				</ul>
+			</li>
+			<li class="col-xs-3 col-sm-3">
+				<a href="products.html">女鞋</a>
+				<ul>
+					<li><a href="products.html">慢跑鞋</a></li>
+					<li><a href="products.html">籃球鞋</a></li>
+					<li><a href="products.html">棒球鞋</a></li>
+					<li><a href="products.html">網球鞋</a></li>
+				</ul>
+			</li>
+			<li class="col-xs-3 col-sm-3"><a href="sale.html">好康不私藏</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

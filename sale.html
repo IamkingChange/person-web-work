@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/sale.css">
+	<link rel="stylesheet" type="text/css" href="icon_files/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<script src="js/jquery/jquery-3.2.1.min.js"></script>
+	<script>
+		var bannerSelected = 1;
+		$(document).ready(function() {
+			var bannerLeft = $("#banner-left");
+			var bannerRight = $("#banner-right");
+			//banner picture switch-------------------
+			bannerLeft.on('click', function() {
+				var imgs = $("img[class^='bannerImg']");
+				if (bannerSelected == 1) {
+					bannerSelected = imgs.length;
+				} else {
+					bannerSelected--;
+				}
+				for (var i = 1; i <= imgs.length; i++) {
+					$('.bannerImg' + i).removeClass("selected");
+				}
+				$('.bannerImg' + bannerSelected).addClass("selected");
+			});
+			bannerRight.on('click', function() {
+				var imgs = $("img[class^='bannerImg']");
+				if (bannerSelected == 3) {
+					bannerSelected = 1;
+				} else {
+					bannerSelected++;
+				}
+				for (var i = 1; i <= imgs.length; i++) {
+					$('.bannerImg' + i).removeClass("selected");
+				}
+				$('.bannerImg' + bannerSelected).addClass("selected");
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="rwd-logo">
+		<a href="index.html"><img alt="logo" src="images/loglo.png"></a>
+	</div>
+	<div class="header col-sm-12">
+		<div class="logo col-sm-1">
+			<a href="index.html"><img alt="logo" src="images/loglo.png"></a>
+		</div>
+
+		<div class="menu-group col-sm-8 col-sm-offset-3">
+			<ul class="item menu">
+				<li><a href="star-wear.html">
+					<p>明星穿什麼</p>
+				</a></li>
+				<li>
+					<a href="products.html">
+						<p>男鞋</p>
+					</a>
+					<ul>
+						<li>
+							<a href="products.html"><p>慢跑鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>籃球鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>棒球鞋</p></a>
+						</li>
+						<li>
+							<a href="products.html"><p>網球鞋</p></a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<p>女鞋</p>
+					</a>
+					<ul>
+						<li>
+							<a href="#"><p>慢跑鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>籃球鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>棒球鞋</p></a>
+						</li>
+						<li>
+							<a href="#"><p>網球鞋</p></a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="sale.html">	<p>好康不私藏</p>
+				</a></li>
+			</ul>
+			<div class="item register">
+				<a href="#">註冊</a>/<a href="#">登入</a>
+				<a href="#"><i class="fa fa-shopping-cart"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="rwd-header col-xs-12">
+		<div class="logo">
+			<a href="index.html"><img alt="logo" src="images/logo-rwd.png"></a>
+		</div>
+		<div class="menu-group col-xs-12">
+			<div class="item col-xs-3">
+				<a href="star-wear.html"><p><i class="fa fa-users"></i></p><p class="txt">明星穿什麼</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="products.html"><p><i class="fa fa-male"></i></p><p class="txt">男鞋</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="products.html"><p><i class="fa fa-female""></i></p><p class="txt">女鞋</p></a>
+			</div>
+			<div class="item col-xs-3">
+				<a href="sale.html"><p><i class="fa fa-gift""></i></p><p class="txt">好康不私藏</p></a>
+			</div>
+		</div>
+	</div>
+	<h1>好康不私藏</h1>
+	<div class="classification">
+		<div class="container">
+			<div class="item col-sm-12 col-xs-12">
+				<a href="sale.html">
+					<h2>慢跑鞋</h2>
+					<img alt="classfication-running" src="images/sale/classfication-running.png">
+				</a>
+			</div>
+			<div class="item col-sm-12 col-xs-12">
+				<a href="sale.html">
+					<h2>棒球鞋</h2>
+					<img alt="classfication-baseball" src="images/sale/classfication-baseball.png">
+				</a>
+			</div>			
+			<div class="item item-tennis col-sm-12 col-xs-12">
+				<a href="sale.html">
+					<h2>網球鞋</h2>
+					<img alt="classfication-tennis" src="images/sale/classfication-tennis.png">
+				</a>
+			</div>
+			<div class="item item-basket item-selected col-sm-12 col-xs-12">
+				<a href="sale.html">
+					<h2 class="selected">籃球鞋</h2>
+					<img alt="classfication-basketball" src="images/sale/classfication-basketball.png">
+				</a>
+			</div>
+			<div class="pointer-down"><i class="fa fa-angle-double-down"></i></div>
+		</div>
+	</div>
+
+
+	<div class="big-ad add-top-margin">
+		<img class="bannerImg1 selected" alt="banner-basketball" src="images/sale/big-ad-1.png">
+		<img class="bannerImg2" alt="banner-running" src="images/sale/big-ad-2.png">
+		<img class="bannerImg3" src="images/sale/big-ad-3.png" alt="banner-tennis">
+	</div>
+
+
+	<div class="today add-top-margin">
+		<div class="title col-xs-12">
+			<h2>今日限定</h2>
+		</div>
+		<div class="product-item item-1 col-xs-6 col-sm-6">
+			<a href="product.html">
+				<div class="block">
+					<img alt="today1" src="images/sale/today1.png">
+				</div>
+				<div class="product-txt">
+					<p>Soldier</p>
+					<p class="price">$3000<span>$2800</span></p>
+				</div>
+			</a>
+		</div>
+		<div class="product-item item-2 col-xs-6 col-sm-6">
+			<a href="product.html">
+				<div class="block">
+					<img alt="today2" src="images/sale/today2.png">
+				</div>
+				<div class="product-txt">
+					<p>LBB III</p>
+					<p class="price">$5200<span>$4800</span></p>
+				</div>
+			</a>
+		</div>
+			<div class="product-item  item-3 col-xs-6 col-sm-6">
+				<a href="product.html">
+					<div class="block">
+						<img alt="today3" src="images/sale/today3.png">
+					</div>
+					<div class="product-txt">
+						<p>Soldier II</p>
+						<p class="price">$2500<span>$2000</span></p>
+					</div>
+				</a>
+			</div>
+		<div class="product-item item-4 col-xs-6 col-sm-6">
+			<a href="product.html">
+				<div class="block">
+					<img alt="today4" src="images/sale/today4.png">
+				</div>
+				<div class="product-txt">
+					<p>喬治 6 代</p>
+					<p class="price">$3000<span>$2500</span></p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+	<div class="interval">
+		<div class="title col-xs-12">
+			<h2>期間特價</h2>
+		</div>
+		<div class="product-item item-1 col-xs-6 col-sm-6">
+			<a href="product.html">
+				<div class="block">
+					<img alt="interval1" src="images/sale/interval1.png">
+				</div>
+				<div class="product-txt">
+					<p>NXT</p>
+					<p class="price">$3200<span>$3000</span></p>
+				</div>
+			</a>
+		</div>
+		<div class="product-item item-2 col-xs-6 col-sm-6">
+			<a href="product.html">
+				<div class="block">
+					<img alt="interval2" src="images/sale/interval2.png">
+				</div>
+				<div class="product-txt">
+					<p>ZOOM 精緻款</p>
+					<p class="price">$3000<span>$2800</span></p>
+				</div>
+			</a>
+		</div>
+		<div class="product-item item-3 col-xs-6 col-sm-6">
+			<a href="product.html">
+				<div class="block">
+					<img alt="interval3" src="images/sale/interval3.png">
+				</div>
+				<div class="product-txt">
+					<p>大滿貫</p>
+					<p class="price">$2800<span>$2500</span></p>
+				</div>
+			</a>
+		</div>
+		<div class="product-item item-4 col-xs-6 col-sm-6">
+			<a href="product.html">
+				<div class="block">
+					<img alt="interval4" src="images/sale/interval4.png">
+				</div>
+				<div class="product-txt">
+					<p>北卡 7 代</p>
+					<p class="price">$3000<span>$2500</span></p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="footer col-sm-12 col-xs-12">
+		<div class="logo">
+			<img alt="logo" src="images/loglo.png">
+		</div>
+		<ul class="footer-menu">
+			<li class="col-xs-3 col-sm-3">
+				<a href="star-wear.html">明星穿什麼</a>
+			</li>
+			<li class="col-xs-3 col-sm-3">
+				<a href="products.html">男鞋</a>
+				<ul>
+					<li><a href="products.html">慢跑鞋</a></li>
+					<li><a href="products.html">籃球鞋</a></li>
+					<li><a href="products.html">棒球鞋</a></li>
+					<li><a href="products.html">網球鞋</a></li>
+				</ul>
+			</li>
+			<li class="col-xs-3 col-sm-3">
+				<a href="products.html">女鞋</a>
+				<ul>
+					<li><a href="products.html">慢跑鞋</a></li>
+					<li><a href="products.html">籃球鞋</a></li>
+					<li><a href="products.html">棒球鞋</a></li>
+					<li><a href="products.html">網球鞋</a></li>
+				</ul>
+			</li>
+			<li class="col-xs-3 col-sm-3"><a href="sale.html">好康不私藏</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
