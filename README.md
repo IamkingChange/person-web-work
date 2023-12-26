@@ -1,2 +1,1 @@
-Just for personal practice only  
-MIT License
+Just for personal practice only
